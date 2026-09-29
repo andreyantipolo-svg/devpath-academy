@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { 
   BookOpen, Code, Trophy, Shield, CheckCircle2, XCircle, Play, 
   Terminal, Award, Lock, ChevronRight, RotateCcw, Sparkles, AlertCircle,
-  Cpu, Flame, Check, RefreshCw
+  Cpu, Flame, Check, RefreshCw, Layout, Database, FileCode
 } from 'lucide-react';
 
 // --- CURRICULUM TRACKS & LEVEL STRUCTURE ---
@@ -91,6 +91,162 @@ const TRACKS = {
           instructions: 'Given an array of item prices `[29.99, 9.99, 4.99]`, calculate the total sum using array reduction or loops and log `Total: 44.97`.',
           initialCode: 'const prices = [29.99, 9.99, 4.99];\n// Calculate total\n',
           expectedOutput: 'Total: 44.97'
+        }
+      }
+    ]
+  },
+  python: {
+    id: 'python',
+    title: 'Python',
+    icon: Terminal,
+    description: 'Learn clear syntax, automation, scripting, and data handling with Python concepts.',
+    levels: [
+      {
+        id: 'beginner',
+        name: 'Beginner',
+        requiredXp: 0,
+        lessons: [
+          {
+            id: 'py-1',
+            title: 'Variables & Output',
+            xp: 50,
+            theory: 'In Python, variables are created when assigned a value. Use `print()` to output values to the console.',
+            exampleCode: 'name = "DevPath"\nprint(name)',
+            quiz: {
+              question: 'Which function outputs text in Python?',
+              options: ['console.log()', 'print()', 'echo()', 'System.out.println()'],
+              correct: 1,
+              explanation: 'Python uses print() for standard output.'
+            },
+            codingTask: {
+              instructions: 'Declare a variable `status` assigned to `"Active"` and print it.',
+              initialCode: 'let status = "Active";\nconsole.log(status);',
+              expectedOutput: 'Active'
+            }
+          }
+        ],
+        capstoneProject: {
+          title: 'Capstone: Value Evaluator',
+          instructions: 'Simulate Python conditional evaluation. Given value = 50, print "Pass" if value >= 50 else print "Fail".',
+          initialCode: 'let value = 50;\n// Write evaluation logic\n',
+          expectedOutput: 'Pass'
+        }
+      }
+    ]
+  },
+  java: {
+    id: 'java',
+    title: 'Java',
+    icon: Cpu,
+    description: 'Understand strongly-typed syntax, object-oriented principles, and class definitions.',
+    levels: [
+      {
+        id: 'beginner',
+        name: 'Beginner',
+        requiredXp: 0,
+        lessons: [
+          {
+            id: 'java-1',
+            title: 'Classes & Main Method',
+            xp: 50,
+            theory: 'Java programs are structured around classes and require a `main` entry point for execution.',
+            exampleCode: 'public class Main {\n  public static void main(String[] args) {\n    System.out.println("Hello Java");\n  }\n}',
+            quiz: {
+              question: 'What is the entry point method for running a Java application?',
+              options: ['run()', 'start()', 'main()', 'execute()'],
+              correct: 2,
+              explanation: 'Java execution starts inside `public static void main(String[] args)`.'
+            },
+            codingTask: {
+              instructions: 'Simulate printing a string in Java style. Print `"Hello Java"`.',
+              initialCode: 'console.log("Hello Java");',
+              expectedOutput: 'Hello Java'
+            }
+          }
+        ],
+        capstoneProject: {
+          title: 'Capstone: OOP Instantiation Simulation',
+          instructions: 'Output `"Class Initialized"` to pass the check.',
+          initialCode: 'console.log("Class Initialized");',
+          expectedOutput: 'Class Initialized'
+        }
+      }
+    ]
+  },
+  cpp: {
+    id: 'cpp',
+    title: 'C++',
+    icon: FileCode,
+    description: 'Learn systems programming concepts, memory pointers, and high-performance algorithms.',
+    levels: [
+      {
+        id: 'beginner',
+        name: 'Beginner',
+        requiredXp: 0,
+        lessons: [
+          {
+            id: 'cpp-1',
+            title: 'Output & Headers',
+            xp: 50,
+            theory: 'C++ relies on `<iostream>` for standard input and output stream operations.',
+            exampleCode: '#include <iostream>\nusing namespace std;\n\nint main() {\n  cout << "C++ Engine" << endl;\n  return 0;\n}',
+            quiz: {
+              question: 'Which object is used in C++ to send output to the stream?',
+              options: ['cout', 'cin', 'print', 'write'],
+              correct: 0,
+              explanation: '`cout` combined with `<<` sends output to standard console stream.'
+            },
+            codingTask: {
+              instructions: 'Log `"C++ Engine"` to match expected execution output.',
+              initialCode: 'console.log("C++ Engine");',
+              expectedOutput: 'C++ Engine'
+            }
+          }
+        ],
+        capstoneProject: {
+          title: 'Capstone: Memory Management Logic',
+          instructions: 'Output `"Allocated"` to pass testing.',
+          initialCode: 'console.log("Allocated");',
+          expectedOutput: 'Allocated'
+        }
+      }
+    ]
+  },
+  web: {
+    id: 'web',
+    title: 'HTML & CSS',
+    icon: Layout,
+    description: 'Structure web pages with HTML elements and style visual layouts with CSS.',
+    levels: [
+      {
+        id: 'beginner',
+        name: 'Beginner',
+        requiredXp: 0,
+        lessons: [
+          {
+            id: 'web-1',
+            title: 'DOM Structure & Tags',
+            xp: 50,
+            theory: 'HTML defines the semantic structure of web documents using nested element tags.',
+            exampleCode: '<h1>DevPath Academy</h1>\n<p>Welcome to learning.</p>',
+            quiz: {
+              question: 'Which tag represents the top-level heading on a standard HTML page?',
+              options: ['<h6>', '<head>', '<h1>', '<header>'],
+              correct: 2,
+              explanation: '`<h1>` defines the most important primary heading.'
+            },
+            codingTask: {
+              instructions: 'Print `"<h1>Title</h1>"` to complete the task.',
+              initialCode: 'console.log("<h1>Title</h1>");',
+              expectedOutput: '<h1>Title</h1>'
+            }
+          }
+        ],
+        capstoneProject: {
+          title: 'Capstone: Markup Validator',
+          instructions: 'Output `"<main>Content</main>"` to pass verification.',
+          initialCode: 'console.log("<main>Content</main>");',
+          expectedOutput: '<main>Content</main>'
         }
       }
     ]

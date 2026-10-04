@@ -37,7 +37,10 @@ export default {
   'home.badges': 'Badges',
   'mode.browser': 'Runs in your browser',
   'mode.guided': 'Guided checks (real runs with a code runner)',
+<<<<<<< HEAD
   'mode.mixed': 'Runs in your browser; Java uses guided checks',
+=======
+>>>>>>> 371730ca95702596b08c0837fab63c3e412a30a2
   'badge.firstRun.name': 'First run',
   'badge.firstRun.desc': 'Run your first piece of code.',
   'badge.firstLesson.name': 'First lesson',

@@ -91,7 +91,11 @@ export async function evaluate({ lang, code, task, setup, settings, onStatus }) 
       /* unreachable: fall back to pattern checks below */
     }
   }
+<<<<<<< HEAD
   const details = checkPatterns(code, pick(task.checks, lang) || []);
+=======
+  const details = checkPatterns(code, task.checks || []);
+>>>>>>> 371730ca95702596b08c0837fab63c3e412a30a2
   const pass = details.length > 0 && details.every((d) => d.ok);
   return done({ status: pass ? 'pass' : 'fail', output: '', details, via: 'pattern' });
 }

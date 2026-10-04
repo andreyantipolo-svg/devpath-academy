@@ -37,7 +37,10 @@ export default {
   'home.badges': 'Mga badge',
   'mode.browser': 'Tumatakbo sa iyong browser',
   'mode.guided': 'Ginabayang pagsusuri (totoong takbo gamit ang code runner)',
+<<<<<<< HEAD
   'mode.mixed': 'Tumatakbo sa iyong browser; ginabayang pagsusuri ang Java',
+=======
+>>>>>>> 371730ca95702596b08c0837fab63c3e412a30a2
   'badge.firstRun.name': 'Unang takbo',
   'badge.firstRun.desc': 'Patakbuhin ang una mong code.',
   'badge.firstLesson.name': 'Unang aralin',

@@ -71,6 +71,7 @@ function runGpp(code) {
   const r = spawnSync('/tmp/_verify', { encoding: 'utf8', timeout: 5000 });
   return { ok: r.status === 0, output: r.stdout };
 }
+<<<<<<< HEAD
 let javaOk;
 function runJava(code) {
   // Compile with the JDK's compiler module and run Main. Returns null when no JDK is available.
@@ -85,6 +86,8 @@ function runJava(code) {
   const r = spawnSync('java', ['-cp', '/tmp/_vjava/out', 'Main'], { encoding: 'utf8', timeout: 10000 });
   return { ok: r.status === 0, output: r.stdout, error: r.stderr };
 }
+=======
+>>>>>>> 371730ca95702596b08c0837fab63c3e412a30a2
 let browser;
 async function webRun(html, tests) {
   if (browser === undefined) {
@@ -114,7 +117,11 @@ async function gradeCode(lang, code, task, setup) {
     return { pass: results.length > 0 && results.every((r) => r.ok), detail: results.filter((r) => !r.ok).map((r) => r.desc).join('; ') };
   }
   if (['java', 'go', 'rust'].includes(lang)) {
+<<<<<<< HEAD
     const d = checkPatterns(code, pick(task.checks, lang) || []);
+=======
+    const d = checkPatterns(code, task.checks || []);
+>>>>>>> 371730ca95702596b08c0837fab63c3e412a30a2
     return { pass: d.length > 0 && d.every((x) => x.ok), detail: d.filter((x) => !x.ok).map((x) => x.desc).join('; ') };
   }
   const r = lang === 'javascript' ? await runJs(src) : lang === 'python' ? runPython(src) : lang === 'sql' ? await runSql(src, setup) : await runCpp(src);
@@ -148,7 +155,11 @@ for (const track of TRACKS) {
         if (item.kind === 'lesson' && item.example && typeof item.example === 'object' && !item.example[lang]) fail(`${where} [${lang}]: missing example`);
         const kind = ['java', 'go', 'rust'].includes(lang) ? 'guided' : lang === 'html' ? 'web' : 'run';
         if (kind === 'run' && pick(task.expected, lang) == null) fail(`${where} [${lang}]: missing expected`);
+<<<<<<< HEAD
         if (kind === 'guided' && !pick(task.checks, lang)?.length) fail(`${where} [${lang}]: missing checks`);
+=======
+        if (kind === 'guided' && !task.checks?.length) fail(`${where} [${lang}]: missing checks`);
+>>>>>>> 371730ca95702596b08c0837fab63c3e412a30a2
         if (kind === 'web' && !task.dom?.length) fail(`${where} [${lang}]: missing dom tests`);
         const setup = task.setup ?? track.setup;
         const sol = await gradeCode(lang, solution, task, setup);
@@ -157,11 +168,14 @@ for (const track of TRACKS) {
         if (!sol.pass) fail(`${where} [${lang}]: reference solution FAILS. ${sol.detail}`);
         const st = await gradeCode(lang, starter, task, setup);
         if (st.pass) fail(`${where} [${lang}]: starter already PASSES (task is trivial)`);
+<<<<<<< HEAD
         if (lang === 'java') {
           const jr = runJava(`${solution}\n${pick(task.harness, lang) || ''}`);
           if (jr === null) console.log(`  (java not executed for ${where}: no JDK)`);
           else if (!jr.ok || !sameOutput(jr.output, pick(task.expected, lang))) fail(`${where} [java]: real javac/java disagrees with expected: ${jr.error || JSON.stringify(jr.output)}`);
         }
+=======
+>>>>>>> 371730ca95702596b08c0837fab63c3e412a30a2
         if (lang === 'cpp') {
           const gpp = runGpp(`${solution}\n${pick(task.harness, lang) || ''}`);
           if (!gpp.ok || !sameOutput(gpp.output, pick(task.expected, lang))) fail(`${where} [cpp]: real g++ disagrees with expected: ${gpp.error || JSON.stringify(gpp.output)}`);

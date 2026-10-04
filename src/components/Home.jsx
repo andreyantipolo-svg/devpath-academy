@@ -8,10 +8,14 @@ import { BADGES, computeBadges, dayKey, lessonDone, nextUp, rankFor, trackProgre
 import { LANGS } from '../engine/run.js';
 import { aiConfigured } from '../ai/claude.js';
 
+<<<<<<< HEAD
 const modeOf = (track) => {
   const guided = track.langs.filter((l) => LANGS[l].kind === 'guided').length;
   return guided === 0 ? 'browser' : guided === track.langs.length ? 'guided' : 'mixed';
 };
+=======
+const modeOf = (track) => (track.langs.every((l) => LANGS[l].kind !== 'guided') ? 'browser' : 'guided');
+>>>>>>> 371730ca95702596b08c0837fab63c3e412a30a2
 
 function Last14({ days }) {
   const cells = Array.from({ length: 14 }, (_, i) => {
@@ -117,7 +121,11 @@ export default function Home({ onSettings }) {
                     <span className="mt-1 block text-sm leading-6 text-muted">{tr.blurb}</span>
                     <span className="mt-3 block h-1.5 overflow-hidden rounded-full bg-raised"><span className="fill block h-full rounded-full" style={{ width: `${p.pct}%`, background: tr.hue }} /></span>
                     <span className="mt-2 block text-xs text-muted">
+<<<<<<< HEAD
                       {t(`mode.${modeOf(tr)}`)}
+=======
+                      {modeOf(tr) === 'browser' ? t('mode.browser') : t('mode.guided')}
+>>>>>>> 371730ca95702596b08c0837fab63c3e412a30a2
                       {tr.langs.length > 1 && ` · ${tr.langs.map((l) => LANGS[l].label).join(' / ')}`}
                     </span>
                   </span>

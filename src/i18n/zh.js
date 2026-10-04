@@ -37,7 +37,10 @@ export default {
   'home.badges': '徽章',
   'mode.browser': '在浏览器中运行',
   'mode.guided': '引导式检查（配合代码运行器可真实运行）',
+<<<<<<< HEAD
   'mode.mixed': '在浏览器中运行；Java 使用引导式检查',
+=======
+>>>>>>> 371730ca95702596b08c0837fab63c3e412a30a2
   'badge.firstRun.name': '首次运行',
   'badge.firstRun.desc': '运行你的第一段代码。',
   'badge.firstLesson.name': '第一课',

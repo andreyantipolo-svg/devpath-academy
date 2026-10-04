@@ -37,7 +37,10 @@ export default {
   'home.badges': 'Badges',
   'mode.browser': 'S\u2019exécute dans votre navigateur',
   'mode.guided': 'Vérifications guidées (exécution réelle avec un exécuteur de code)',
+<<<<<<< HEAD
   'mode.mixed': 'S\u2019exécute dans votre navigateur ; Java utilise des vérifications guidées',
+=======
+>>>>>>> 371730ca95702596b08c0837fab63c3e412a30a2
   'badge.firstRun.name': 'Première exécution',
   'badge.firstRun.desc': 'Exécutez votre premier morceau de code.',
   'badge.firstLesson.name': 'Première leçon',

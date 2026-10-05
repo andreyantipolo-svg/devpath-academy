@@ -12,15 +12,9 @@ Everything runs in the browser: no backend is needed.
 | SQL | Real SQLite (sql.js) | Preloaded sample database |
 | HTML & CSS | Real, sandboxed iframe + DOM tests | Live preview, checks computed styles |
 | C++ | Real, JSCPP interpreter in a worker | Fundamentals: I/O, control flow, functions, arrays, pointers |
-<<<<<<< HEAD
 | Data Structures & Algorithms | **JavaScript or Python** run for real; **Java** uses guided checks | Search, stacks, hash maps, sorting. Pick your language per lesson |
 | Cybersecurity | Real (JavaScript) | Defensive only: ciphers, hashing, XSS, SQLi, rate limiting, log analysis |
 | Java, Go, Rust (and Java inside DSA) | **Guided checks** (pattern based) | Real execution if you connect a runner (see below) |
-=======
-| Data Structures & Algorithms | Real, **JavaScript or Python** (your choice) | Search, stacks, hash maps, sorting |
-| Cybersecurity | Real (JavaScript) | Defensive only: ciphers, hashing, XSS, SQLi, rate limiting, log analysis |
-| Java, Go, Rust | **Guided checks** (pattern based) | Real execution if you connect a runner (see below) |
->>>>>>> 371730ca95702596b08c0837fab63c3e412a30a2
 
 Every level ends with a **capstone** that unlocks the next level. Progress, XP, streaks, badges and
 code drafts are saved in the browser.
@@ -69,11 +63,7 @@ npm run verify    # runs EVERY lesson's reference solution through the real engi
 npm run lint
 ```
 
-<<<<<<< HEAD
 `npm run verify` proves each solution passes and each starter fails. It uses Node, `python3`, sql.js, JSCPP, a real JDK (Java solutions are compiled and run) and,
-=======
-`npm run verify` proves each solution passes and each starter fails. It uses Node, `python3`, sql.js, JSCPP and,
->>>>>>> 371730ca95702596b08c0837fab63c3e412a30a2
 if available, headless Chromium for HTML/CSS (`CHROMIUM_PATH=/path/to/chrome npm run verify`; it uses
 `playwright-core`). C++ answers are also cross-checked against real `g++` when installed.
 

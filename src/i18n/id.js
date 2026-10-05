@@ -37,10 +37,7 @@ export default {
   'home.badges': 'Lencana',
   'mode.browser': 'Berjalan di browser-mu',
   'mode.guided': 'Pemeriksaan terpandu (eksekusi nyata dengan code runner)',
-<<<<<<< HEAD
   'mode.mixed': 'Berjalan di browser-mu; Java memakai pemeriksaan terpandu',
-=======
->>>>>>> 371730ca95702596b08c0837fab63c3e412a30a2
   'badge.firstRun.name': 'Eksekusi pertama',
   'badge.firstRun.desc': 'Jalankan kode pertamamu.',
   'badge.firstLesson.name': 'Pelajaran pertama',

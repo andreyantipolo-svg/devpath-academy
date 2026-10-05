@@ -5,10 +5,7 @@ import { useUI } from './UIContext.js';
 import Markdown from './Markdown.jsx';
 import { LANGS, evaluate, warmUp } from '../engine/run.js';
 import { diffLines, pick } from '../engine/grade.js';
-<<<<<<< HEAD
 import { remoteAvailable } from '../engine/remoteRunner.js';
-=======
->>>>>>> 371730ca95702596b08c0837fab63c3e412a30a2
 import { capstoneKey } from '../data/index.js';
 import { lessonDone } from '../state/progress.js';
 
@@ -90,13 +87,8 @@ export default function CodeLab({ track, level, item, isCapstone, lang, onNextLe
           <summary className="cursor-pointer font-medium text-muted">{t('code.howTested')}</summary>
           <div className="mt-2 space-y-2 text-ink/80">
             {info.kind === 'web' && <ul className="list-disc space-y-1 pl-5">{task.dom.map((d) => <li key={d.desc}>{d.desc}</li>)}</ul>}
-<<<<<<< HEAD
             {info.kind === 'guided' && <ul className="list-disc space-y-1 pl-5">{(pick(task.checks, lang) || []).map((c) => <li key={c.desc}>{c.desc}</li>)}</ul>}
             {harness && (info.kind !== 'guided' || remoteAvailable(lang, state.settings)) && (<><p>{t('code.testsAppended')}</p><pre className="code-surface overflow-x-auto rounded-lg p-3 font-mono text-xs leading-5">{harness}</pre></>)}
-=======
-            {info.kind === 'guided' && <ul className="list-disc space-y-1 pl-5">{task.checks.map((c) => <li key={c.desc}>{c.desc}</li>)}</ul>}
-            {harness && (<><p>{t('code.testsAppended')}</p><pre className="code-surface overflow-x-auto rounded-lg p-3 font-mono text-xs leading-5">{harness}</pre></>)}
->>>>>>> 371730ca95702596b08c0837fab63c3e412a30a2
             {info.kind !== 'web' && expected != null && (<><p>{t('code.expected')}</p><pre className="code-surface overflow-x-auto rounded-lg p-3 font-mono text-xs leading-5">{expected}</pre></>)}
           </div>
         </details>

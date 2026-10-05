@@ -37,10 +37,7 @@ export default {
   'home.badges': 'バッジ',
   'mode.browser': 'ブラウザで実行',
   'mode.guided': 'ガイド付きチェック（コードランナーで実際に実行可能）',
-<<<<<<< HEAD
   'mode.mixed': 'ブラウザで実行（Javaはガイド付きチェック）',
-=======
->>>>>>> 371730ca95702596b08c0837fab63c3e412a30a2
   'badge.firstRun.name': '初めての実行',
   'badge.firstRun.desc': '最初のコードを実行する。',
   'badge.firstLesson.name': '最初のレッスン',

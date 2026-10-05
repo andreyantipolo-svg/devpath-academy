@@ -37,10 +37,7 @@ export default {
   'home.badges': 'बैज',
   'mode.browser': 'आपके ब्राउज़र में चलता है',
   'mode.guided': 'निर्देशित जाँच (कोड रनर के साथ असली रन)',
-<<<<<<< HEAD
   'mode.mixed': 'आपके ब्राउज़र में चलता है; Java में निर्देशित जाँच होती है',
-=======
->>>>>>> 371730ca95702596b08c0837fab63c3e412a30a2
   'badge.firstRun.name': 'पहला रन',
   'badge.firstRun.desc': 'अपना पहला कोड चलाएँ।',
   'badge.firstLesson.name': 'पहला पाठ',
